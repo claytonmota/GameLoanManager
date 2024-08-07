@@ -1,0 +1,98 @@
+# Compiled binary directories
+bin/
+obj/
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Mono Auto Generated Files
+mono_crash.*
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# VS Code directories
+.vscode/
+.vscode/*
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# DotNet specific files
+*.swp
+*~
+.project
+.idea/
+.terraform/
+.history/
+.ionide/
+
+# Rider directories
+.idea/
+.idea/*
+
+# Rider files
+*.sln.iml
+
+# Don't ignore project files in Git
+!*.csproj
+!*.props
+!*.targets
+
+# Ignore JetBrains Rider folder
+.idea/
+
+# Ignore ReSharper folder
+.ReSharper
+
+# Ignore NuGet packages folder
+**/packages/
+
+# Ignore compiled dlls and pdb files
+*.dll
+*.pdb
+
+# Ignore NuGet packages
+*.nupkg
+# except build/ folder
+!build/
+
+# Ignore git file modifications in these folders
+/[Pp]ackages/
+![Pp]ackages/build/
+![Pp]ackages/repositories.config
+/[Pp]ackages/*
+
+# Ignore web stuff
+project.lock.json
+project.fragment.lock.json
+artifacts/
+.DS_Store
+
+# Ignore Webpack files
+npm-debug.log*
+yarn-error.log*
+
+# Ignore EF migrations
+Migrations/
+
+# Ignore App secrets
+**/secrets.json

@@ -1,0 +1,44 @@
+﻿version: '3.8'
+
+services:
+  mongo:
+    image: mongo:latest
+    container_name: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+    networks:
+      - app-network
+
+  gameloanmanager:
+    build:
+      context: ./GameLoanManager
+      dockerfile: Dockerfile
+    container_name: gameloanmanager
+    ports:
+      - "5000:80"
+    depends_on:
+      - mongo
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - MongoDbSettings__ConnectionString=mongodb://mongo:27017
+      - MongoDbSettings__DatabaseName=GameLoanDb
+    networks:
+      - app-network
+
+  frontend:
+    build:
+      context: ./game-loan-manager-frontend
+      dockerfile: Dockerfile
+    container_name: frontend
+    ports:
+      - "3000:80"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+
+volumes:
+  mongo-data:

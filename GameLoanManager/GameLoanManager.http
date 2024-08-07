@@ -1,0 +1,6 @@
+@GameLoanManager_HostAddress = http://localhost:5279
+
+GET {{GameLoanManager_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
